@@ -17,7 +17,7 @@ jobs:
 
       - uses: docker://pandoc/latex:2.9
         with:
-          args: --output=output/docs.html ${{ steps.files_list.outputs.files }}
+          args: --toc --output=output/docs.html ${{ steps.files_list.outputs.files }}
           
       - uses: actions/upload-artifact@master
         with:
