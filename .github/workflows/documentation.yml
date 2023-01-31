@@ -11,8 +11,8 @@ jobs:
       - name: create file list
         id: files_list
         run: |
-          echo "Lorem ipsum" > lorem_1.md  # create two example files
-          echo "dolor sit amet" > lorem_2.md
+          echo "Lorem ipsum" > bots/bot1/lorem_1.md  # create two example files
+          echo "dolor sit amet" > bots/bot2/lorem_2.md
           mkdir output  # create output dir
           # this will also include README.md
           echo "::set-output name=files::$(printf '"%s" ' *.md)"
